@@ -185,3 +185,22 @@ OR
 ```
 # kubectl get pods,svc -owide
 ```
+
+### Using Kubernetes v1.20.0, getting "unexpected error getting claim reference: selfLink was empty
+> https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/issues/25#issuecomment-742616668
+```
+# vim /etc/kubernetes/manifests/kube-apiserver.yaml
+spec:
+  containers:
+  - command:
+    - kube-apiserver
+    
+    Add this line:
+    - --feature-gates=RemoveSelfLink=false
+
+# kubectl apply -f /etc/kubernetes/manifests/kube-apiserver.yaml
+# kubectl apply -f /etc/kubernetes/manifests/kube-apiserver.yaml
+```
+
+
+
