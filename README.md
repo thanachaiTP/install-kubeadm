@@ -201,6 +201,12 @@ spec:
 # kubectl apply -f /etc/kubernetes/manifests/kube-apiserver.yaml
 # kubectl apply -f /etc/kubernetes/manifests/kube-apiserver.yaml
 ```
+#### OR
+```
+# vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --fail-swap-on=false --feature-gates=RemoveSelfLink=false"
 
-
+# systemctl daemon-reload
+# systemctl restart kubelet.service
+```
 
