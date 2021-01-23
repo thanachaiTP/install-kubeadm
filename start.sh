@@ -14,7 +14,9 @@ sleep 5s
 
 echo ""
 echo "apt update and install kubeadm kubelet kubectl"
+apt install -y apt-transport-https curl
 apt update && apt install -y kubelet kubeadm kubectl
+apt-mark hold kubelet kubeadm kubectl
 echo "--- Install kubeadm kubelet kubectl Done ---"
 
 sleep 1m
