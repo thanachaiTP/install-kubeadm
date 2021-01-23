@@ -3,6 +3,7 @@
 
 ### Install docker
 ```
+# install -y apt-transport-https curl
 # curl https://get.docker.com | sh
 ```
 
@@ -14,6 +15,7 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 # apt update
 # apt install -y kubelet kubeadm kubectl
+# apt-mark hold kubelet kubeadm kubectl
 ```
 
 ### Config sysctl
