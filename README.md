@@ -56,6 +56,11 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 # kubectl get pods --all-namespaces -o wide
 ```
 
+### Autocomplete
+```
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+```
+
 ### Node master Shedule
 ```
 # kubectl taint nodes --all node-role.kubernetes.io/master-
