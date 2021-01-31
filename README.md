@@ -218,6 +218,14 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 ```
 
 ## How to Renew Certificate k8s
+
+```
+# kubeadm certs check-expiration
+# kubeadm certs renew all --kubeconfig=/etc/kubernetes/admin.conf
+# cp /etc/kubernetes/admin.conf /root/.kube/config
+# systemctl restart docker
+```
+
 > https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-certs/
 
 > https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/
