@@ -217,3 +217,8 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 # systemctl restart kubelet.service
 ```
 
+## How to Renew Certificate k8s
+> https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-certs/
+
+> https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/
+
