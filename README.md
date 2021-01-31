@@ -230,3 +230,6 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 
 > https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/
 
+> https://github.com/kubernetes/kubeadm/issues/581
+
+
