@@ -240,7 +240,7 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 ## Reset k8s cluster
 ```
 # kubeadm reset
-# ifconfig cni0 down && ip link delete cni0 && ip link delete cni0
-# ifconfig flannel.1 down && ip link delete flannel.1 && ip link delete flannel.1
+# ifconfig cni0 down && ip link delete cni0
+# ifconfig flannel.1 down && ip link delete flannel.1
 # rm -rf /var/lib/cni/
 ```
