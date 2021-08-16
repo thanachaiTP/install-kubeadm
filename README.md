@@ -42,6 +42,8 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 
 ### Config Cluster K8S at Master
 > https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+> https://github.com/flannel-io/flannel#flannel
+> https://kubernetes.io/docs/concepts/services-networking/network-policies/
 ```
 # kubeadm reset
 # kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -55,6 +57,8 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 # export KUBECONFIG=/etc/kubernetes/admin.conf
 # kubectl get pods --all-namespaces -o wide
 ```
+For Kubernetes v1.17+ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
 
 ### Autocomplete
 ```
