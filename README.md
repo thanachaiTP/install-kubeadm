@@ -42,7 +42,9 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 
 ### Config Cluster K8S at Master
 > https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
 > https://github.com/flannel-io/flannel#flannel
+
 > https://kubernetes.io/docs/concepts/services-networking/network-policies/
 ```
 # kubeadm reset
