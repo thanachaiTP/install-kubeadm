@@ -246,3 +246,24 @@ Environment="KUBELET_KUBECONFIG_ARGS=--bootstrap-kubeconfig=/etc/kubernetes/boot
 # ifconfig flannel.1 down && ip link delete flannel.1
 # rm -rf /var/lib/cni/
 ```
+
+## Configuring flannel to use a non default interface in kubernetes
+> https://stackoverflow.com/questions/47845739/configuring-flannel-to-use-a-non-default-interface-in-kubernetes
+
+If you download the kube-flannel.yml file, you should look at DaemonSet spec, specifically at the "kube-flannel" container. There, you should add the required "--iface=enp0s8" argument (Don't forget the "="). Part of the code I've used.
+```
+# wget https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+# vim kube-flannel.yml
+
+  containers:
+  - name: kube-flannel
+    image: quay.io/coreos/flannel:v0.10.0-amd64
+    command:
+    - /opt/bin/flanneld
+    args:
+    - --ip-masq
+    - --kube-subnet-mgr
+    - --iface=enp0s8
+
+# kubectl apply -f kube-flannel.yml
+```
