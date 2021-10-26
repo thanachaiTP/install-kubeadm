@@ -267,3 +267,16 @@ If you download the kube-flannel.yml file, you should look at DaemonSet spec, sp
 
 # kubectl apply -f kube-flannel.yml
 ```
+
+## วิธีเรียกใช้งานชื่อ services ภายใน k8s
+> https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
+การเรียกชื่อหรือการเชื่อมต่อผ่านชื่อภายใน k8s services 
+```
+nginx.default.svc.cluster.local
+```
+| Name          | Descriptions             |
+|---------------|--------------------------|
+| nginx         | คือชื่อ services            |
+| default       | คือ namespaces            |
+| svc           | คือ services              |
+| cluster.local | คือ default dns ภายใน k8s | 
