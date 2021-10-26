@@ -270,6 +270,7 @@ If you download the kube-flannel.yml file, you should look at DaemonSet spec, sp
 
 ## วิธีเรียกใช้งานชื่อ services ภายใน k8s
 > https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/
+
 การเรียกชื่อหรือการเชื่อมต่อผ่านชื่อภายใน k8s services 
 ```
 nginx.default.svc.cluster.local
