@@ -281,3 +281,9 @@ nginx.default.svc.cluster.local
 | default       | คือ namespaces            |
 | svc           | คือ services              |
 | cluster.local | คือ default dns ภายใน k8s | 
+
+
+## k8s delete all pods with status 'Evicted'
+```
+# kubectl get pods -owide | grep Evicted | awk '{print $1}' | xargs kubectl delete pod --grace-period=0 --force
+```
